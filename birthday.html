@@ -129,8 +129,8 @@
     padding:22px 26px; margin-bottom:18px; position:relative; overflow:hidden;
   }
   .msg-card::before { content:attr(data-icon); position:absolute; top:-8px; right:10px; font-size:50px; opacity:0.07; }
-  .msg-card p { font-family:'Sarabun',sans-serif; font-size:16px; line-height:2; color:#6b2462; }
-  .msg-card p em { font-family:'Playfair Display',serif; font-style:italic; color:var(--deep-rose); font-size:18px; }
+  .msg-card p { font-family:'Charm',cursive; font-size:18px; line-height:2; color:#6b2462; }
+  .msg-card p em { font-family:'Charm',cursive; font-style:italic; color:var(--deep-rose); font-size:20px; }
   .msg-card p strong { color:var(--purple); font-weight:600; }
 
   .heart-row { text-align:center; font-size:24px; letter-spacing:12px; margin:22px 0; animation:heartbeat 1.3s ease-in-out infinite; }
@@ -147,20 +147,19 @@
   /* Photos */
   .photo-section { margin-top:32px; }
   .photo-label { font-family:'Playfair Display',serif; font-style:italic; font-size:14px; color:var(--deep-rose); text-align:center; margin-bottom:18px; letter-spacing:1px; }
-  .photo-grid { display:flex; flex-direction:column; gap:14px; align-items:center; }
+  .photo-grid { display:flex; flex-direction:column; gap:20px; align-items:center; }
+  .photo-item { width:100%; max-width:380px; }
   .photo-frame {
-    width:100%; max-width:380px; aspect-ratio:4/3; border-radius:20px;
+    width:100%; aspect-ratio:4/3; border-radius:20px;
     background:linear-gradient(135deg,#fce7f3,#f3e8ff);
     border:2px dashed rgba(168,85,247,0.35);
     display:flex; align-items:center; justify-content:center;
-    position:relative; overflow:hidden; cursor:pointer;
+    position:relative; overflow:hidden;
     transition:all 0.3s;
     box-shadow:0 6px 24px rgba(168,85,247,0.1);
   }
-  .photo-frame:hover { transform:translateY(-4px); box-shadow:0 14px 40px rgba(168,85,247,0.22); border-color:rgba(244,114,182,0.5); }
-  .photo-frame input[type="file"] { position:absolute; inset:0; opacity:0; cursor:pointer; z-index:5; width:100%; height:100%; }
   .photo-frame img { width:100%; height:100%; object-fit:cover; border-radius:18px; position:absolute; inset:0; }
-  .photo-placeholder { text-align:center; pointer-events:none; z-index:2; }
+  .photo-placeholder { text-align:center; z-index:2; }
   .photo-placeholder span { font-size:44px; display:block; margin-bottom:8px; }
   .photo-placeholder p { font-size:13px; color:var(--purple); opacity:0.65; }
   .photo-corner { position:absolute; width:18px; height:18px; border-color:var(--pink); border-style:solid; opacity:0.4; }
@@ -168,6 +167,21 @@
   .photo-corner.tr{top:8px;right:8px;border-width:2px 2px 0 0}
   .photo-corner.bl{bottom:8px;left:8px;border-width:0 0 2px 2px}
   .photo-corner.br{bottom:8px;right:8px;border-width:0 2px 2px 0}
+  .path-input-row { display:flex; gap:8px; margin-top:10px; }
+  .path-input {
+    flex:1; padding:10px 14px; border-radius:12px; font-family:'Sarabun',sans-serif; font-size:13px;
+    border:1.5px solid rgba(168,85,247,0.3); background:rgba(255,255,255,0.8);
+    color:#6b2462; outline:none; transition:border-color 0.2s;
+  }
+  .path-input:focus { border-color:var(--rose); }
+  .path-input::placeholder { color:rgba(168,85,247,0.45); }
+  .path-load-btn {
+    padding:10px 16px; border-radius:12px; border:none; cursor:pointer;
+    background:linear-gradient(135deg,#f472b6,#a855f7); color:#fff;
+    font-family:'Sarabun',sans-serif; font-size:13px; font-weight:600;
+    transition:all 0.2s; white-space:nowrap;
+  }
+  .path-load-btn:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(168,85,247,0.35); }
 
   /* Footer */
   .card-footer {
@@ -212,8 +226,8 @@
     <div class="card-header">
       <span class="card-header-flowers">🌸 🌺 🌷 🌼 💐</span>
       <div class="card-to-label">Happy Birthday to</div>
-      <div class="card-name">นุ่น</div>
-      <div class="card-hb">— วันเกิดปีที่หวานที่สุด —</div>
+      <div class="card-name">My love</div>
+      <div class="card-hb">— วันเกิดที่รักคนสวย —</div>
     </div>
 
     <div class="card-content">
@@ -221,21 +235,19 @@
 
       <div class="msg-card" data-icon="💕">
         <p>
-          นุ่นที่รักที่สุดในโลก 💕<br><br>
-          วันนี้คือวันที่พิเศษกว่าวันไหนทั้งหมด<br>
-          เป็นวันที่คนที่ฉันรักที่สุดได้ลืมตามาดูโลก<br>
-          และทำให้ชีวิตของฉัน <em>สมบูรณ์แบบขึ้น</em><br>
-          อย่างที่ไม่เคยเป็นมาก่อน 🌹
+          ขอให้ที่รักเค้ามีความสุขในทุกๆวัน 💕<br><br>
+          กินเยอะๆ ยิ้มเยอะๆ เจอแต่เพื่อนดีๆ ที่น่ารัก คนรอบข้างที่รักน่ารักทุกคน<br><br>
+          เค้าก็จะเป็นแฟนที่ดีของที่รักไปตลอด จะไม่ให้ที่รักรู้สึกเสียดายเวลาที่เป็นแฟนกับเค้าแน่นอน 🌸
         </p>
       </div>
 
-      <div class="msg-card" data-icon="🌙">
+      <div class="msg-card" data-icon="🎓">
         <p>
-          ทุกเช้าที่ตื่นขึ้นมา<br>
-          สิ่งแรกที่นึกถึงคือ <strong>นุ่น</strong><br>
-          ทุกคืนก่อนหลับตา<br>
-          ใจก็ยังวนเวียนอยู่กับเธอคนเดิม 🌙<br><br>
-          <em>รักเธอมากกว่าที่คำพูดจะบอกได้</em>
+          วันเกิดปีนี้ขอให้ที่รักเค้าสมหวังในทุกๆเรื่อง 🌟<br><br>
+          ได้ <strong>เอ</strong> ทุกวิชา อ่านหนังสือก็จำได้ทุกเนื้อหา<br>
+          ขอให้ที่รักเค้าปวดหัวน้อยๆ เวลาอ่านหนังสือ<br><br>
+          แล้วก็สุขภาพแข็งแรง ป่วยยากๆ<br>
+          <em>เดี๋ยวเค้าจะป่วยแทนที่รักเอง</em> 💪
         </p>
       </div>
 
@@ -243,31 +255,39 @@
 
       <div class="poem-block">
         <p>
-          ถ้าความรักเป็นดอกไม้<br>
-          เธอคือสวนที่สวยที่สุด 🌸<br><br>
-          ถ้าชีวิตเป็นบทเพลง<br>
-          เธอคือทำนองที่ไพเราะที่สุด 🎶<br><br>
-          <span>ขอให้วันเกิดปีนี้</span><br>
-          เต็มไปด้วยรอยยิ้ม ความสุข<br>
-          และความรักที่มีให้เธอ<br>
-          ตลอดไป ♾️
+          หลับฝันดีทุกคืน<br>
+          แล้วก็เป็นแฟนที่น่ารักของเค้าไปตลอดเลยนะงับ 🌙<br><br>
+          <span>เค้าจองตัวที่รักไปตลอดแล้วนะงับ</span><br><br>
+          ไปเที่ยว ไปดูพระอาทิตย์ตกด้วยกัน<br>
+          แล้วก็ไปกินของแซ่บด้วยนะงับ 🌅🍜<br><br>
+          คุณธรพร สมานวงศ์ ♾️
         </p>
       </div>
 
       <div class="photo-section">
         <div class="photo-label">— My love —</div>
         <div class="photo-grid">
-          <div class="photo-frame">
-            <input type="file" accept="image/*" onchange="loadPhoto(this,0)">
-            <div class="photo-placeholder" id="ph0"><span>📸</span><p>กดเพื่อใส่รูปภาพ</p></div>
-            <div class="photo-corner tl"></div><div class="photo-corner tr"></div>
-            <div class="photo-corner bl"></div><div class="photo-corner br"></div>
+          <div class="photo-item">
+            <div class="photo-frame" id="frame0">
+              <div class="photo-placeholder" id="ph0"><span>📸</span><p>รูปภาพที่ 1</p></div>
+              <div class="photo-corner tl"></div><div class="photo-corner tr"></div>
+              <div class="photo-corner bl"></div><div class="photo-corner br"></div>
+            </div>
+            <div class="path-input-row">
+              <input class="path-input" id="path0" type="text" placeholder="247867_0.jpg">
+              <button class="path-load-btn" onclick="loadPath(0)">โหลด</button>
+            </div>
           </div>
-          <div class="photo-frame">
-            <input type="file" accept="image/*" onchange="loadPhoto(this,1)">
-            <div class="photo-placeholder" id="ph1"><span>🖼️</span><p>กดเพื่อใส่รูปภาพที่ 2</p></div>
-            <div class="photo-corner tl"></div><div class="photo-corner tr"></div>
-            <div class="photo-corner bl"></div><div class="photo-corner br"></div>
+          <div class="photo-item">
+            <div class="photo-frame" id="frame1">
+              <div class="photo-placeholder" id="ph1"><span>🖼️</span><p>รูปภาพที่ 2</p></div>
+              <div class="photo-corner tl"></div><div class="photo-corner tr"></div>
+              <div class="photo-corner bl"></div><div class="photo-corner br"></div>
+            </div>
+            <div class="path-input-row">
+              <input class="path-input" id="path1" type="text" placeholder="247865_0.jpg">
+              <button class="path-load-btn" onclick="loadPath(1)">โหลด</button>
+            </div>
           </div>
         </div>
       </div>
@@ -369,17 +389,18 @@ function startPetals() {
   }, 700);
 }
 
-function loadPhoto(input, idx) {
-  if (!input.files || !input.files[0]) return;
-  const reader = new FileReader();
-  reader.onload = e => {
-    const frame = input.parentElement;
-    document.getElementById('ph' + idx).style.display = 'none';
-    let img = frame.querySelector('img');
-    if (!img) { img = document.createElement('img'); frame.appendChild(img); }
-    img.src = e.target.result;
+function loadPath(idx) {
+  const pathVal = document.getElementById('path' + idx).value.trim();
+  if (!pathVal) return;
+  const frame = document.getElementById('frame' + idx);
+  document.getElementById('ph' + idx).style.display = 'none';
+  let img = frame.querySelector('img');
+  if (!img) { img = document.createElement('img'); frame.appendChild(img); }
+  img.src = pathVal;
+  img.onerror = () => {
+    document.getElementById('ph' + idx).style.display = 'block';
+    alert('โหลดรูปไม่ได้ กรุณาตรวจสอบ path อีกครั้งนะงับ 🌸');
   };
-  reader.readAsDataURL(input.files[0]);
 }
 </script>
 </body>
